@@ -56,41 +56,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
-							<button class="btn btn-primary bold">LIST LAHAN</button>
-							<br><br>
-							<table class="table table-striped table-bordered">
-								<thead class=" danger">
-									<th width="30px;">No.</th>
-									<th>Daerah</th>
-									<th>Luas</th>
-									<th>Harga</th>
-									<th>Ketinggian (mdpl)</th>
-									<th>Suhu (<sup>o</sup>C)</th>
-									<th>Akses jalan</th>
-									<th width="190px;">Aksi</th>
-								</thead>
+							<div class="panel panel-default">
+							<button class="btn btn-primary bold" disabled="">LIST LAHAN</button>
+								<br><br>
+								<table class="table table-striped table-bordered">
+									<thead class=" danger">
+										<th width="30px;">No.</th>
+										<th>Daerah</th>
+										<th>Luas</th>
+										<th>Harga</th>
+										<th>Ketinggian (mdpl)</th>
+										<th>Suhu (<sup>o</sup>C)</th>
+										<th>Akses jalan</th>
+										<th width="190px;">Aksi</th>
+									</thead>
 
-								<tbody>
+									<tbody>
 
-									<?php
-									$i=1;
-									foreach($alternatif as $u){ ?>
-									<tr>
-										<td><?php echo $i++ ?> </td>
-										<td><?php echo $u->kecamatan ?></td>
-										<td><?php echo $u->luas ?></td>
-										<td><?php echo $u->harga ?></td>
-										<td><?php echo $u->ketinggian ?></td>
-										<td><?php echo $u->suhu ?></td>
-										<td><?php echo $u->akses?></td>
-										<td>
-											<a href="<?php echo site_url('admin/c_saranLahan/detail_verifikasi/'.$u->id_alternatif) ?>"><button class="btn btn-success bold">Detail</button></a>
-										</td>
-									</tr>
-									<?php } ?>
+										<?php
+										$i=1;
+										foreach($alternatif as $u){ ?>
+										<tr>
+											<td><?php echo $i++ ?> </td>
+											<td><?php echo $u->kecamatan ?></td>
+											<td><?php echo $u->luas ?></td>
+											<td><?php echo $u->harga ?></td>
+											<td><?php echo $u->ketinggian ?></td>
+											<td><?php echo $u->suhu ?></td>
+											<td><?php echo $u->akses?></td>
+											<td>
+												<a href="<?php echo site_url('admin/c_saranLahan/detail_verifikasi/'.$u->id_alternatif) ?>"><button class="btn btn-success bold">Detail</button></a>
+											</td>
+										</tr>
+										<?php } ?>
 
-								</tbody>
-							</table>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

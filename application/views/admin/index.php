@@ -56,6 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
+					<div class="panel panel-default">
 							<a href="<?php echo site_url('admin/c_admin/form_tambah_lahan')?>" style="text-decoration:none">
 								<button class="btn btn-primary bold">Tambah Alternatif</button>
 							</a>
@@ -95,6 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 								</tbody>
 							</table>
+						</div>
 						</div>
 					</div>
 				</div>

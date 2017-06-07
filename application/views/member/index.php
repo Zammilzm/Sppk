@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</nav>
 
 	<div class="wrapper">
-		<div class="header header-filter" style="background-image: url('assetdash/img/kebun.jpg');">
+		<div class="header header-filter" style="background-image: url('../assetdash/img/kebun.jpg');">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="row">
 									<div class="col-md-3">
 										<div class="team-player">
-											<img src="assetdash/img/anne.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+											<img src="../assetdash/img/anne.jpg" alt="Thumbnail Image" class="img-raised img-circle">
 											<h4 class="title">ANNE RUFAEDAH<br />
 												<small class="text-muted">PROGRAMMER</small>
 											</h4>
@@ -145,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</div>
 										<div class="col-md-3">
 											<div class="team-player">
-												<img src="assetdash/img/zammil.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+												<img src="../assetdash/img/zammil.jpg" alt="Thumbnail Image" class="img-raised img-circle">
 												<h4 class="title">ZAMMIL<br />
 													<small class="text-muted">PROJECT MANAGER</small>
 												</h4>
@@ -159,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div>
 											<div class="col-md-3">
 												<div class="team-player">
-													<img src="assetdash/img/alvi.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+													<img src="../assetdash/img/alvi.jpg" alt="Thumbnail Image" class="img-raised img-circle">
 													<h4 class="title">KHASANUL ALVIANI<br />
 														<small class="text-muted">DESIGNER</small>
 													</h4>
@@ -173,7 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</div>
 												<div class="col-md-3">
 													<div class="team-player">
-														<img src="assetdash/img/ocha.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+														<img src="../assetdash/img/ocha.jpg" alt="Thumbnail Image" class="img-raised img-circle">
 														<h4 class="title">YOSAFAT PARULIAN D<br />
 															<small class="text-muted">ANALYST</small>
 														</h4>

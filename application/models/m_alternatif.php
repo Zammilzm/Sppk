@@ -32,8 +32,8 @@ class M_alternatif extends CI_Model{
 
 	function edit_lahan($where,$table){	
 		$this->db->select('*');
-		$this->db->from('alternatif');
-		$this->db->join('kecamatan', 'alternatif.id_kecamatan = kecamatan.id');
+		$this->db->from('saran_lahan');
+		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
 		$this->db->where('id_alternatif',$where);
 		$query = $this->db->get();
 		return $query->result(); 	
@@ -41,8 +41,8 @@ class M_alternatif extends CI_Model{
 	
 	function detail_lahan($id){	
 		$this->db->select('*');
-		$this->db->from('alternatif');
-		$this->db->join('kecamatan', 'alternatif.id_kecamatan = kecamatan.id');
+		$this->db->from('saran_lahan');
+		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
 		$this->db->where('id_alternatif',$id);
 		$query = $this->db->get();
 		return $query->result(); 	

@@ -85,13 +85,13 @@ class C_alternatif extends CI_Controller {
 		'id_alternatif' => $id
 	);
 
-	$this->m_alternatif->update_lahan($where,$data,'alternatif');
+	$this->m_alternatif->update_lahan($where,$data,'saran_lahan');
 	redirect('admin/c_alternatif');
 	}
 
 	function hapus($id){
 		$where = array('id_alternatif' => $id);
-		$this->m_alternatif->hapus_lahan($where,'alternatif');
+		$this->m_alternatif->hapus_lahan($where,'saran_lahan');
 		redirect('admin/c_alternatif');
 	}
 

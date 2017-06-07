@@ -1,83 +1,234 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
+	<title>Lahan Kopi Jember</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assetdash/css/bootstrap.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assetdash/css/material-kit.css') ?>">
+	<link href="../assets/css/material-kit.css" rel="stylesheet"/>
+
 </head>
-<body>
 
+<body class="landing-page">
+	<nav class="navbar navbar-transparent navbar-absolute">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand hover" href="http://www.creative-tim.com">Perkebunan Kopi Jember</a>
+			</div>
 
- <!-- Fixed navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Penentuan Lahan</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo site_url('member/c_member')?>">Beranda</a></li>
-        <li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/pilih_kriteria')?>">Saran lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Kritik dan Saran</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-
-
-
-	<br><br><br>
-	<h2><strong><p align="center">HOME </p></strong></h2>
-
-	<!-- <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<br><br>
-
-				<table class="table table-striped table-bordered">
-					<thead class=" danger">
-						<th width="30px;">No.</th>
-						<th>Daerah</th>
-						<th>Luas</th>
-						<th>Harga</th>
-						<th>Ketinggian (mdpl)</th>
-						<th>Suhu (<sup>o</sup>C)</th>
-						<th>Akses jalan</th>
-						<th width="190px;">Aksi</th>
-					</thead>
-
-					<tbody>
-
-						<?php
-						$i=1;
-						foreach($alternatif as $u){ ?>
-						<tr>
-							<td><?php echo $i++ ?> </td>
-							<td><?php echo $u->kecamatan ?></td>
-							<td><?php echo $u->luas ?></td>
-							<td><?php echo $u->harga ?></td>
-							<td><?php echo $u->ketinggian ?></td>
-							<td><?php echo $u->suhu ?></td>
-							<td><?php echo $u->akses ?></td>
-							<td>
-								<a class="btn btn-success bold" href="<?php echo site_url('admin/c_alternatif/edit/'.$u->id_alternatif) ?>"> Edit </a>
-								<a class="btn btn-danger bold" href="<?php echo site_url('admin/c_alternatif/hapus/'.$u->id_alternatif) ?>">Hapus</a>
-							</td>
-						</tr>
-						<?php } ?>
-
-					</tbody>
-				</table>
+			<div class="collapse navbar-collapse" id="navigation-example">
+				<ul class="nav navbar-nav navbar-right">
+					<li style="background-color: #9FA3A4;">
+						<a href="<?php echo site_url('member/c_member')?>">
+							<i class="material-icons">home</i> Beranda
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">
+							<i class="material-icons">notifications</i> Tambah Saran Lahan
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('member/c_member/daftar_lahan')?>">
+							<i class="material-icons">flight takeoff</i> Daftar Lahan Di Jember
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('member/c_member/pilih_kriteria')?>">
+							<i class="material-icons">directions run</i> Saran Rekomendasi Lahan
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('member/c_member/kritik_saran')?>">
+							<i class="material-icons">notifications</i> Tambah Saran Lahan
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</div>
- -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
-</body>
-</html>
+	</nav>
+
+	<div class="wrapper">
+		<div class="header header-filter" style="background-image: url('assetdash/img/kebun.jpg');">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h1 class="title">Tentukan Lahan Perkebunan Anda</h1>
+						<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.</h4>
+							<br />
+							<a href="#" class="btn btn-danger btn-lg">
+								<i class="fa fa-calendar-o"></i> Klik Selengkapnya
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main main-raised">
+				<div class="container">
+					<div class="section text-center section-landing">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<h2 class="title">FITUR LAHAN PERKEBUNAN JEMBER</h2>
+								<h5 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+								</div>
+							</div>
+
+							<div class="features">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="info">
+											<div class="icon icon-primary">
+												<i class="material-icons">chat</i>
+											</div>
+											<h4 class="info-title">Info Lahan</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quidem, necessitatibus.</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="info">
+											<div class="icon icon-success">
+												<i class="material-icons">verified_user</i>
+											</div>
+											<h4 class="info-title">Tambah Lahan</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate totam harum ipsum debitis temporibus quae</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="section text-center">
+							<h2 class="title">About Us</h2>
+
+							<div class="team">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="team-player">
+											<img src="assetdash/img/anne.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+											<h4 class="title">ANNE RUFAEDAH<br />
+												<small class="text-muted">PROGRAMMER</small>
+											</h4>
+											<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+												consequat.</p>
+												<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
+												<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="team-player">
+												<img src="assetdash/img/zammil.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+												<h4 class="title">ZAMMIL<br />
+													<small class="text-muted">PROJECT MANAGER</small>
+												</h4>
+												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													consequat. </p>
+													<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
+													<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="team-player">
+													<img src="assetdash/img/alvi.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+													<h4 class="title">KHASANUL ALVIANI<br />
+														<small class="text-muted">DESIGNER</small>
+													</h4>
+													<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+														tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+														quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+														consequat</p>
+														<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
+														<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="team-player">
+														<img src="assetdash/img/ocha.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+														<h4 class="title">YOSAFAT PARULIAN D<br />
+															<small class="text-muted">ANALYST</small>
+														</h4>
+														<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+															tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+															quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+															consequat</p>
+															<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
+															<a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<footer class="footer">
+										<div class="container">
+											<nav class="pull-left">
+												<ul>
+													<li>
+														<a href="landing-page.html">
+															Beranda
+														</a>
+													</li>
+													<li>
+														<a href="signup-page.html">
+															Tambah Saran Lahan
+														</a>
+													</li>
+													<li>
+														<a href="">
+															Daftar Lahan Di Jember
+														</a>
+													</li>
+													<li>
+														<a href="">
+															Saran Rekomendasi Lahan
+														</a>
+													</li>
+												</ul>
+											</nav>
+											<div class="copyright pull-right">
+												&copy; 2017, by Sppk Team
+											</div>
+										</div>
+									</footer>
+
+								</div>
+							</body>
+
+							<!--   Core JS Files   -->
+							<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+							<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+							<script src="../assets/js/material.min.js"></script>
+							<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
+
+							</html>

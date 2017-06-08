@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <button type="button" class="sidebar-toggle">
                 <i class="fa fa-bars"></i>
               </button>
-              <a class="navbar-brand text-size-24" href="#"><i class="fa fa-star-o"></i> Tambah Lahan Kopi</a>
+              <a class="navbar-brand text-size-24" href="#"><i class="fa fa-star-o"></i> Edit Lahan Kopi</a>
             </div>
           </div>
         </nav>
@@ -58,8 +58,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-md-12">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Tambah Lahan Kopi</h3>
-                <span class="text-grey">Fitur ini memungkinkan admin untuk menambah lahan kopi di jember</span>
+                <h3 class="panel-title">Edit Lahan Kopi</h3>
+                <span class="text-grey">Fitur ini memungkinkan admin untuk mengedit lahan kopi di jember</span>
               </div>
               <div class="panel-body">
                <?php foreach($alternatif as $u){ ?> 

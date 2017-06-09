@@ -2,14 +2,15 @@
 
 class M_alternatif extends CI_Model{
 	function data_lahan(){
-		return $this->db->get('alternatif');
+		return $this->db->get('saran_lahan');
 	}
 
 	function saran_lahan(){
 		$this->db->select('*');
 		$this->db->from('saran_lahan');
 		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
-		return $this->db->get();
+		$query =  $this->db->get();
+		return $query->result(); 
 	}
 
 	function tampil_lahan(){
@@ -22,7 +23,7 @@ class M_alternatif extends CI_Model{
 	}
 
 	public function jumlah_lahan(){
-		$query = $this->db->query("SELECT * FROM alternatif");
+		$query = $this->db->query("SELECT * FROM saran_lahan");
 		return $query->num_rows();
 	}
 

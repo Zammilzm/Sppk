@@ -54,51 +54,8 @@ class C_admin extends CI_Controller {
 		$luas = $this->input->post('luas');
 		$suhu = $this->input->post('suhu');
 		$akses = $this->input->post('akses');
-		for ($i=0; $i < count($kriteria); $i++) { 
-			if ($kriteria[$i]->kriteria=='akses') {
-				if ($akses==$kriteria[$i]->gol1) {
-					$golAkses = 1;
-				} else if($akses==$kriteria[$i]->gol2){
-					$golAkses = 2;
-				}else{
-					$golAkses = 3;
-				}
-			} else if($kriteria[$i]->kriteria=='harga') {
-				if ($harga>=$kriteria[$i]->gol1) {
-					$golHarga = 1;
-				} else if($harga>=$kriteria[$i]->gol2){
-					$golHarga = 2;
-				}else{
-					$golHarga = 3;
-				}
-			}else if ($kriteria[$i]->kriteria=='suhu') {
-				if ($suhu>=$kriteria[$i]->gol1) {
-					$golSuhu = 1;
-				} else if($suhu>=$kriteria[$i]->gol2){
-					$golSuhu = 2;
-				}else{
-					$golSuhu = 3;
-				}
-			}else if ($kriteria[$i]->kriteria=='luas') {
-				if ($ketinggian<=$kriteria[$i]->gol1) {
-					$golLuas = 1;
-				} else if($ketinggian<=$kriteria[$i]->gol2){
-					$golLuas = 2;
-				}else{
-					$golLuas = 3;
-				}
-			}else {
-				if ($ketinggian<=$kriteria[$i]->gol1) {
-					$golKetinggian = 1;
-				} else if($ketinggian<=$kriteria[$i]->gol2){
-					$golKetinggian = 2;
-				}else{
-					$golKetinggian = 3;
-				}
-			}
-			
-		}
-
+	
+		
 		$data = array(
 			'id_kecamatan' => $kec,
 			'alamat' => $alamat,
@@ -107,11 +64,6 @@ class C_admin extends CI_Controller {
 			'akses' => $akses,
 			'harga' => $harga,
 			'luas' => $luas,
-			'golKetinggian' => $golKetinggian,
-			'golSuhu' => $golSuhu,
-			'golAkses' => $golAkses,
-			'golHarga' => $golHarga,
-			'golLuas' => $golLuas,
 			'status' => 'Disetujui'
 			);
 		$this->m_alternatif->tambah_lahan($data,'saran_lahan');

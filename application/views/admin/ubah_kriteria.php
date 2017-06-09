@@ -210,7 +210,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                  <div class="form-group">
                   <label class="col-sm-3 control-label">Kriteria</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="kriteria" value="<?php echo $u->kriteria ?>">
+                    <input type="text" class="form-control" name="kriteria" val
+                    ]ue="<?php echo $u->kriteria ?>">
                   </div>
                 </div>
                 <div class="form-group">

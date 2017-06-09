@@ -35,14 +35,14 @@ class C_alternatif extends CI_Controller {
 			'harga' => $harga,
 			'luas' => $luas
 			);
-		$this->m_alternatif->tambah_lahan($data,'alternatif');
+		$this->m_alternatif->tambah_lahan($data,'saran_lahan');
 		redirect('admin/c_admin/index');
 	}
 
 	function edit($id){
 		$data['kecamatan'] = $this->m_kecamatan->data_kec()->result();
  		$where = array('id_alternatif' => $id);
-		$data['alternatif'] = $this->m_alternatif->edit_lahan($id,'alternatif');
+		$data['alternatif'] = $this->m_alternatif->edit_lahan($id,'saran_lahan');
 		$this->load->view('admin/ubah_lahan',$data);
 	}
 

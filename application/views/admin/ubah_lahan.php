@@ -118,11 +118,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <label class="col-sm-3 control-label">Akses</label>
               <div class="col-sm-6">
                 <select class="form-control border-input selectpicker" name="akses">
-                  <option value="<?php echo $u->akses ?>" selected="">- <?php echo $u->akses ?> -</option>
-                  $i=1;
-                  <?php foreach($akses as $k){ 
-                    if ($k->id!==$u->akses) {
-                      echo "<option value='$k->id'>$k->Akses</option>";
+                  <option value="<?php echo $u->id_kecamatan ?>" selected="">- <?php echo $u->ket ?> -</option>
+                  <?php foreach($akses as $a){ 
+                    if ($a->id_akses!==$u->akses) {
+                      echo "<option value='$a->id_akses' >$a->ket</option>";
                     }
                   }
                   ?>

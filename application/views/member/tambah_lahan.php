@@ -19,11 +19,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo site_url('member/c_member')?>">Beranda</a></li>
-        <li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/pilih_lahan')?>">Saran lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Kritik dan Saran</a></li>
+          <li><a href="<?php echo site_url('member/c_member')?>">Beranda</a></li>
+          <li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Lahan</a></li>
+          <li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan</a></li>
+          <li><a href="<?php echo site_url('member/c_member/pilih_lahan')?>">Saran lahan</a></li>
+          <li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Kritik dan Saran</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -34,12 +34,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
    <br><br><br>
 
-   <div class="col-md-8 col-md-offset-2 ">
+   <div class="col-md-5 col-md-offset-3 ">
     <form method="POST" action="<?php echo site_url('member/c_alternatif/tambah_lahan')?>"> 
      <h2><strong><p align="center">Form Tambah Lahan</p></strong></h2>
      <hr>
      <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-12">
         <div class="form-group">
           <label>Kecamatan</label>
           <select class="form-control border-input selectpicker" name="kec">
@@ -51,13 +51,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </select>
         </div>
       </div>
-      <div class="col-md-9">
+    </div>
+    <div class="row">
+      <div class="col-md-12">
         <div class="form-group">
           <label>Alamat</label>
           <input type="text" class="form-control border-input" name="alamat"> 
         </div>
       </div>
-      <div class="col-sm-4">
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
         <div class="form-group">
           <label>Harga</label>
           <div class="input-group">
@@ -66,7 +70,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
         <div class="form-group">
           <label>Luas</label>
           <div class="input-group">
@@ -75,7 +81,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
         <div class="form-group">
           <label>Ketinggian</label>
           <div class="input-group">
@@ -84,18 +92,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
         <div class="form-group">
           <label>Akses Jalan</label>
           <select class="form-control border-input selectpicker" name="akses">
-          <option value="0" selected="">- Akses Jalan -</option>
+            <option value="0" selected="">- Akses Jalan -</option>
             <option value="3">Baik</option>
             <option value="2">Sedang</option>
             <option value="1">Buruk</option>
           </select>
         </div>
       </div>
-      <div class="col-sm-6">
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
         <div class="form-group">
           <label>Suhu</label>
           <div class="input-group">
@@ -105,7 +117,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
     </div>
-
     <hr>
     <div class="row">
       <div class="col-md-12">

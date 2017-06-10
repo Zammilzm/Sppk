@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<td><?php echo $u->harga ?></td>
 							<td><?php echo $u->ketinggian ?></td>
 							<td><?php echo $u->suhu ?></td>
-							<td><?php echo $u->akses ?></td>
+							<td><?php echo $u->ket ?></td>
 							<td>
 								<a class="btn btn-success bold" href="<?php echo site_url('member/c_alternatif/detail/'.$u->id_alternatif) ?>"> Detail </a>
 							</td>

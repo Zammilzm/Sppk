@@ -59,12 +59,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						foreach($lahan as $u){ ?>
 						<tr>
 							<td><?php echo $i++ ?> </td>
-							<td><?php echo $u->kecamatan ?></td>
-							<td><?php echo $u->luas ?></td>
-							<td><?php echo $u->harga ?></td>
-							<td><?php echo $u->ketinggian ?></td>
-							<td><?php echo $u->suhu ?></td>
-							<td><?php echo $u->akses ?></td>
+							<td><?php echo $u['kecamatan'] ?></td>
+							<td><?php echo $u['luas'] ?></td>
+							<td><?php echo $u['harga'] ?></td>
+							<td><?php echo $u['ketinggian'] ?></td>
+							<td><?php echo $u['suhu'] ?></td>
+							<td><?php echo $u['akses'] ?></td>
 						</tr>
 						<?php } ?>
 
@@ -95,17 +95,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<?php
 						$i=1;
-						foreach($net_flow as $u){ ?>
+						foreach($net_flow as $n){ ?>
 						<tr>
 							<td><?php echo $i++ ?> </td>
-							<td><?php echo $u['kecamatan'] ?></td>
-							<td><?php echo $u['luas'] ?></td>
-							<td><?php echo $u['harga'] ?></td>
-							<td><?php echo $u['leavingFlow'] ?></td>
-							<td><?php echo $u['enteringFlow'] ?></td>
-							<td><?php echo $u['net_flow'] ?></td>
+							<td><?php echo $n['kecamatan'] ?></td>
+							<td><?php echo $n['luas'] ?></td>
+							<td><?php echo $n['harga'] ?></td>
+							<td><?php echo $n['leavingFlow'] ?></td>
+							<td><?php echo $n['enteringFlow'] ?></td>
+							<td><?php echo $n['net_flow'] ?></td>
 							<td>
-								<a class="btn btn-success bold" href="<?php echo site_url('member/c_alternatif/detail/'.$u['id_lahan']) ?>"> Detail </a>
+								<a class="btn btn-success bold" href="<?php echo site_url('member/c_alternatif/detail/'.$n['id_lahan']) ?>"> Detail </a>
 							</td>
 						</tr>
 						<?php } ?>

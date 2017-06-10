@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </tr>
       <tr>
         <td>Akses Jalan </td>
-        <td>: <?php echo $u->akses ?></td>
+        <td>: <?php echo $u->ket ?></td>
       </tr>
     </table>
 

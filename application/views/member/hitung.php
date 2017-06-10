@@ -43,12 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<table class="table tbl-detail">
 						<tr>
 							<td width="80px;">
-							<!-- 	<div class="btn-group" data-toggle="buttons">
+								<div class="btn-group" data-toggle="buttons">
 									<label class="btn btn-success ">
 										<input type="checkbox" name="Kriteria[]" value="luas">
 										<span class="glyphicon glyphicon-ok"></span>
 									</label>
-								</div> -->
+								</div>
 							</td>
 							<td><?php echo $kriteria[0]->kriteria ?> Lahan</td>
 							<td>
@@ -63,12 +63,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</tr>
 						<tr>
 							<td>
-								<!-- <div class="btn-group" data-toggle="buttons">
+								<div class="btn-group" data-toggle="buttons">
 									<label class="btn btn-success ">
 										<input type="checkbox" name="Kriteria[]" value="harga" >
 										<span class="glyphicon glyphicon-ok"></span>
 									</label>
-								</div> -->
+								</div>
 							</td>
 							<td><?php echo $kriteria[1]->kriteria ?> Lahan</td>
 							<td>
@@ -83,12 +83,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</tr>
 						<tr>
 							<td>
-								<!-- <div class="btn-group" data-toggle="buttons">
+								<div class="btn-group" data-toggle="buttons">
 									<label class="btn btn-success ">
 										<input type="checkbox" name="Kriteria[]" value="ketinggian" >
 										<span class="glyphicon glyphicon-ok"></span>
 									</label>
-								</div> -->
+								</div>
 							</td>
 							<td><?php echo $kriteria[2]->kriteria ?>  Lahan</td>
 							<td>
@@ -103,12 +103,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</tr>
 						<tr>
 							<td>
-								<!-- <div class="btn-group" data-toggle="buttons">
+								<div class="btn-group" data-toggle="buttons">
 									<label class="btn btn-success">
 										<input type="checkbox"  name="Kriteria[]" value="akses">
 										<span class="glyphicon glyphicon-ok"></span>
 									</label>
-								</div> -->
+								</div>
 							</td>
 							<td><?php echo $kriteria[3]->kriteria ?></td>
 							<td>
@@ -123,12 +123,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</tr>
 						<tr>
 							<td>
-								<!-- <div class="btn-group" data-toggle="buttons">
+								<div class="btn-group" data-toggle="buttons">
 									<label class="btn btn-success">
 										<input type="checkbox" name="Kriteria[]" value="suhu" >
 										<span class="glyphicon glyphicon-ok"></span>
 									</label>
-								</div> -->
+								</div>
 							</td>
 							<td><?php echo $kriteria[4]->kriteria ?></td>
 							<td>

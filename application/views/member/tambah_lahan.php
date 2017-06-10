@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+	<title></title>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/slider.css') ?>">
   <script type="text/javascript" src="<?php echo base_url('assets/js/slider.js') ?>"></script>
@@ -89,9 +89,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <label>Akses Jalan</label>
           <select class="form-control border-input selectpicker" name="akses">
           <option value="0" selected="">- Akses Jalan -</option>
-            <option value="Baik">Baik</option>
-            <option value="Sedang">Sedang</option>
-            <option value="Buruk">Buruk</option>
+            <option value="3">Baik</option>
+            <option value="2">Sedang</option>
+            <option value="1">Buruk</option>
           </select>
         </div>
       </div>

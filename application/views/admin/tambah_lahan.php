@@ -112,9 +112,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <label class="col-sm-3 control-label">Akses</label>
                   <div class="col-sm-6">
                     <select class="form-control border-input selectpicker" name="akses">
-                      <option value="Baik">Baik</option>
-                      <option value="Sedang">Sedang</option>
-                      <option value="Buruk">Buruk</option>
+                      <option value="3">Baik</option>
+                      <option value="2">Sedang</option>
+                      <option value="1">Buruk</option>
                     </select>
                   </div>
                 </div>

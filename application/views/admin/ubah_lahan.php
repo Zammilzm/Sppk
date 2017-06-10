@@ -117,7 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group">
               <label class="col-sm-3 control-label">Akses</label>
               <div class="col-sm-6">
-              <select class="form-control border-input selectpicker" name="akses">
+                <select class="form-control border-input selectpicker" name="akses">
                   <option value="<?php echo $u->akses ?>" selected="">- <?php echo $u->akses ?> -</option>
                   $i=1;
                   <?php foreach($akses as $k){ 

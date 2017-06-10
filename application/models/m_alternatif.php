@@ -9,6 +9,8 @@ class M_alternatif extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('saran_lahan');
 		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
+		$this->db->join('akses', 'saran_lahan.akses = akses.id_akses');
+		$this->db->order_by("kecamatan", "asc");
 		$query =  $this->db->get();
 		return $query->result(); 
 	}
@@ -17,6 +19,8 @@ class M_alternatif extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('saran_lahan');
 		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
+		$this->db->join('akses', 'saran_lahan.akses = akses.id_akses');
+		$this->db->order_by("kecamatan", "asc");
 		$this->db->where('status','Disetujui');
 		$query = $this->db->get();
 		return $query->result(); 
@@ -35,6 +39,7 @@ class M_alternatif extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('saran_lahan');
 		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
+		$this->db->join('akses', 'saran_lahan.akses = akses.id_akses');
 		$this->db->where('id_alternatif',$where);
 		$query = $this->db->get();
 		return $query->result(); 	
@@ -44,6 +49,7 @@ class M_alternatif extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('saran_lahan');
 		$this->db->join('kecamatan', 'saran_lahan.id_kecamatan = kecamatan.id');
+		$this->db->join('akses', 'saran_lahan.akses = akses.id_akses');
 		$this->db->where('id_alternatif',$id);
 		$query = $this->db->get();
 		return $query->result(); 	

@@ -9,6 +9,7 @@ class C_alternatif extends CI_Controller {
 		// }
 		$this->load->helper('text');
 		$this->load->model('m_alternatif');
+		$this->load->model('m_akses');
 		$this->load->model('m_kecamatan');
 		$this->load->helper('url');
 	}
@@ -41,6 +42,7 @@ class C_alternatif extends CI_Controller {
 
 	function edit($id){
 		$data['kecamatan'] = $this->m_kecamatan->data_kec()->result();
+		$data['akses'] = $this->m_akses->data_akses()->result();
  		$where = array('id_alternatif' => $id);
 		$data['alternatif'] = $this->m_alternatif->edit_lahan($id,'saran_lahan');
 		$this->load->view('admin/ubah_lahan',$data);

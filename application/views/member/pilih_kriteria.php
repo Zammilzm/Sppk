@@ -32,13 +32,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-	<br><br><br>
-	<h2><strong><p align="center">Pilih Kriteria </p></strong></h2>
 	
 	<div class="container-fluid">
 		<form method="POST" action="<?php echo site_url('member/c_hitung/hitung_prediksi')?>">
 			<div class="row">
-				<div class="col-sm-9 col-md-offset-2">
+				<div class="col-sm-9 col-md-offset-1">
+					<br><br><br>
+					<h2><strong><p align="center">Pilih Kriteria </p></strong></h2>
 					<hr>
 					<table class="table tbl-detail">
 						<tr>
@@ -155,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</form>
 	</div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
 </body>
 </html>

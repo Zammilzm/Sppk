@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 class C_alternatif extends CI_Controller {
 
 	public function __construct() {

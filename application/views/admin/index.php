@@ -11,6 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminasset/plugins/fontawesome/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminasset/css/theme-floyd.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminasset/css/theme-helper.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/datatables.min.css') ?>">
 </head>
 <body>
 	<div id="wrapper">
@@ -61,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<button class="btn btn-primary bold">Tambah Alternatif</button>
 								</a>
 								<br><br>
-								<table class="table table-striped table-bordered">
+								<table class="table table-striped table-bordered" id="tabel-lahan">
 									<thead class=" danger">
 										<th width="30px;">No.</th>
 										<th>Daerah</th>
@@ -105,6 +106,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/theme-floyd.js') ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.1.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/jquery-3.1.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/datatables.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url();?>/assets/js/datatables.min.js" ></script>
+<script type="text/javascript" src="<?php echo base_url();?>/assets/js/jquery-3.1.1.min.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tabel-lahan').DataTable();
+	});
+</script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 </html>

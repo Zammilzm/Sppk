@@ -16,7 +16,7 @@
 </head>
 <body>
 	<!--header start here-->
-	<h1>Flat Login Form</h1>
+	<h1>Admin Login</h1>
 	<div class="header agile">
 		<div class="wrap">
 			<div class="login-main wthree">

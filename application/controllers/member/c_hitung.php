@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 class C_hitung extends CI_Controller {
 
 	public function __construct() {

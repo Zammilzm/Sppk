@@ -1,13 +1,13 @@
 <?php
-
+// session_start();
 class C_admin extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
 
-		// if($this->session->userdata('status') != "login"){
-		// 	redirect(base_url("login"));
-		// }
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 		$this->load->helper('text');
 		$this->load->model('m_saranLahan');
 		$this->load->model('m_alternatif');
@@ -72,10 +72,8 @@ class C_admin extends CI_Controller {
 	}
 
 	public function logout() {
-		// $this->session->unset_userdata('username');
-		// $this->session->unset_userdata('level');
-		// session_destroy();
-		// redirect('auth');
+		$this->session->sess_destroy();
+		redirect(base_url('login'));
 
 	}
 }

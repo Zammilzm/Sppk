@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</li>
 					<li>
 						<a href="<?php echo site_url('member/c_member/kritik_saran')?>">
-							<i class="material-icons">notifications</i> Tambah Saran Lahan
+							<i class="material-icons">notifications</i> Tambah kritik dan Saran
 						</a>
 					</li>
 				</ul>

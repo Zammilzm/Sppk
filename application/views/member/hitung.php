@@ -20,10 +20,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="<?php echo site_url('member/c_member')?>">Beranda</a></li>
-					<li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan</a></li>
-					<li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Lahan</a></li>
-					<li><a href="<?php echo site_url('member/c_member/pilih_lahan')?>">Saran lahan</a></li>
-					<li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Kritik dan Saran</a></li>
+					<li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Saran Lahan</a></li>
+					<li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan Di Jember</a></li>
+					<li><a href="<?php echo site_url('member/c_member/pilih_lahan')?>">Saran Rekomendasi Lahan</a></li>
+					<li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Tambah Kritik dan Saran</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -155,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</form>
 	</div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
 </body>
 </html>

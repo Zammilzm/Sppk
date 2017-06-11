@@ -19,10 +19,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo site_url('member/c_member')?>">Beranda</a></li>
-        <li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/pilih_lahan')?>">Saran lahan</a></li>
-        <li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Kritik dan Saran</a></li>
+        <li><a href="<?php echo site_url('member/c_member/form_tambah_lahan')?>">Tambah Saran Lahan</a></li>
+        <li><a href="<?php echo site_url('member/c_member/daftar_lahan')?>">Daftar Lahan Di Jember</a></li>
+        <li><a href="<?php echo site_url('member/c_member/pilih_lahan')?>">Saran Rekomendasi Lahan</a></li>
+        <li><a href="<?php echo site_url('member/c_member/kritik_saran')?>">Tambah Kritik dan Saran</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

@@ -1,11 +1,12 @@
 <?php
-session_start();
+
 class C_admin extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		// if ($this->session->userdata('username')=="") {
-		// 	redirect('auth');
+
+		// if($this->session->userdata('status') != "login"){
+		// 	redirect(base_url("login"));
 		// }
 		$this->load->helper('text');
 		$this->load->model('m_saranLahan');

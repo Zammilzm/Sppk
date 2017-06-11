@@ -1,51 +1,37 @@
+<!DOCTYPE HTML>
 <html>
-<?php
-if (isset($this->session->userdata['logged_in'])) {
-
-header("location: http://localhost/login/index.php/user_authentication/user_login_process");
-}
-?>
 <head>
-	<title>Login Form</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
+	<title>Login</title>
+	<!-- Custom Theme files -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/stylelogin.css') ?>">
+	<!-- for-mobile-apps -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="keywords" content="Flat Login Form Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<!-- //for-mobile-apps -->
+	<!--Google Fonts-->
+	<link href='//fonts.googleapis.com/css?family=Signika:400,600' rel='stylesheet' type='text/css'>
+	<!--google fonts-->
 </head>
 <body>
-	<?php
-	if (isset($logout_message)) {
-	echo "<div class='message'>";
-	echo $logout_message;
-	echo "</div>";
-}
-?>
-<?php
-if (isset($message_display)) {
-echo "<div class='message'>";
-echo $message_display;
-echo "</div>";
-}
-?>
-<div id="main">
-	<div id="login">
-		<h2>Login Form</h2>
-		<hr/>
-		<?php echo form_open('user_authentication/user_login_process'); ?>
-		<?php
-		echo "<div class='error_msg'>";
-		if (isset($error_message)) {
-		echo $error_message;
-	}
-	echo validation_errors();
-	echo "</div>";
-	?>
-	<label>UserName :</label>
-	<input type="text" name="username" id="name" placeholder="username"/><br /><br />
-	<label>Password :</label>
-	<input type="password" name="password" id="password" placeholder="**********"/><br/><br />
-	<input type="submit" value=" Login " name="submit"/><br />
-	<a href="<?php echo base_url() ?>index.php/user_authentication/user_registration_show">To SignUp Click Here</a>
-	<?php echo form_close(); ?>
-</div>
-</div>
+	<!--header start here-->
+	<h1>Flat Login Form</h1>
+	<div class="header agile">
+		<div class="wrap">
+			<div class="login-main wthree">
+				<div class="login">
+					<h3>Login</h3>
+					<form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+						<input type="text" placeholder="Username" required="" name="username">
+						<input type="password" placeholder="Password" name="password">
+						<input type="submit" value="Login">
+					</form>
+					<div class="clear"> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

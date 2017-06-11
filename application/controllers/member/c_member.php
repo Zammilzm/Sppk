@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 class C_member extends CI_Controller {
 
 	public function __construct() {
@@ -15,6 +15,10 @@ class C_member extends CI_Controller {
 	}
 	public function index() {
 		$this->load->view('member/index');
+	}
+
+	public function login(){
+		$this->load->view('login_form');
 	}
 
 	//form daftar lahan

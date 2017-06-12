@@ -166,6 +166,17 @@ if ($jml_kri!==0) {
  }
 
 
+
+    // echo "</br></br>nilai h</br>";
+    // for ($k=0; $k < $jml_kri; $k++) { 
+    //   for ($i=0; $i < $jml_alt ; $i++) { 
+    //     for ($j=0; $j < $jml_alt; $j++) { 
+    //       echo $H[$k][$i][$j]." , ";
+    //     }echo"</br>";
+    //   }echo"</br>";
+    // }
+
+
    // hitung dan simpan nilai index preferensi
  if ($jml_kri!==0) {
   for ($i=0; $i < $jml_alt; $i++) { 
@@ -174,26 +185,44 @@ if ($jml_kri!==0) {
       for ($k=0; $k < $jml_kri; $k++) {
         $tot_h[$i][$j]+=$H[$k][$i][$j];
       }
+      // echo $tot_h[$i][$j]." , ";
       $ip[$i][$j]=$tot_h[$i][$j]*1/$jml_kri;
     }
+    // echo"</br>";
   }
 } 
 
 
+    // echo "</br></br>nilai ip</br>";
+    //   for ($i=0; $i < $jml_alt ; $i++) { 
+    //     for ($j=0; $j < $jml_alt; $j++) { 
+    //       echo $ip[$i][$j]." , ";
+    //     }echo"</br>";
+    //   }echo"</br>";
 
+$nilai=array();
 //nilai leaving flow, entering flow, net flow
 for ($i=0; $i < $jml_alt ; $i++) { 
- $hasil[$i]['leavingFlow'] = 0;
- $hasil[$i]['enteringFlow'] = 0;
+ $nilai[$i]['leavingFlow'] = 0;
+ $nilai[$i]['enteringFlow'] = 0;
  for ($j=0; $j < $jml_alt ; $j++) { 
-   $hasil[$i]['leavingFlow']+= $ip[$i][$j];
-   $hasil[$i]['enteringFlow'] += $ip[$j][$i];
+   $nilai[$i]['leavingFlow']+= $ip[$i][$j];
+   $nilai[$i]['enteringFlow'] += $ip[$j][$i];
  }
- $hasil[$i]['leavingFlow'] = 1/$jml_alt*$hasil[$i]['leavingFlow'];
- $hasil[$i]['enteringFlow'] = 1/$jml_alt*$hasil[$i]['enteringFlow'];
+   // echo $nilai[$i]['leavingFlow']." , ";
+    // echo $nilai[$i]['enteringFlow']." , ";
+
+
+ $hasil[$i]['leavingFlow'] = $nilai[$i]['leavingFlow']/($jml_alt-1);
+ $hasil[$i]['enteringFlow'] = $nilai[$i]['enteringFlow']/($jml_alt-1);
  $hasil[$i]['net_flow'] = $hasil[$i]['leavingFlow']-$hasil[$i]['enteringFlow'];
  $hasil[$i]['id_lahan'] = $lahan[$i]['id'];
 }
+
+// for ($i=0; $i <$jml_alt ; $i++){
+//     echo $hasil[$i]['leavingFlow']." <br>";
+//     echo $hasil[$i]['enteringFlow']." , ";
+// }
 
 
 for ($i=0; $i <count($hasil) ; $i++) { 
@@ -257,7 +286,7 @@ $data['index preferensi']=$ip;
 $data['lahan']=$lahan;
 $data['net_flow']=$hasil;
 
-$this->load->view('member/saran_lahan',$data);
+ $this->load->view('member/saran_lahan',$data);
 }
 }
 
